@@ -1,0 +1,16 @@
+:root{
+    --head-color:hsla(0, 0%, 13%, 1);
+    --dark-blue:hsla(228, 69%, 13%, 1);
+    --blue:hsla(228, 69%, 20%, 1);
+
+    --content-color: hsla(0, 0%, 13%, 1);
+    --date-color:hsla(0, 2%, 44%, 1);
+    --white:hsla(0, 0%, 100%, 1);
+
+
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
