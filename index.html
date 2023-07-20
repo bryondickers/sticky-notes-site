@@ -1,26 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./style.css">
-    <title>Sticky note</title>
-</head>
-
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <title>my notes</title>
+  </head>
+  <body>
     <main>
-        <header>
-            <header>
-                <h1>My Notes</h1>
-                <a id="link-to-add-form" class="Add-new-note btn-state" href="http://">+ Add a new note</a>
-            </header>
-        </header>
+      <header>
+        <h1>My Notes</h1>
+        <a
+          id="add-new-note-btn"
+          class="Add-new-note-btn btn-state"
+          href="http://"
+          >+ Add a new note</a
+        >
+      </header>
 
+      <!-- add content -->
     </main>
-    
+    <div id="opacity-bg"></div>
+    <!-- add note form section -->
+    <section id="add-note-form" class="add-note-form">
+      <div class="form-heading-flex">
+        <p class="form-heading">Add a new note</p>
+        <button id="cancel-form" class="x-button update-buttons">
+          <svg
+            width="28"
+            height="28"
+            viewBox="0 0 28 28"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <rect width="28" height="28" rx="14" fill="white" />
+            <path
+              d="M8 20L20 8"
+              stroke="#101840"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M20 20L8 8"
+              stroke="#101840"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </button>
+      </div>
+      <form>
+        <textarea name="message" id="message" placeholder="Type a new note...">
+        </textarea>
+        <button type="submit" id="submit" class="submit-note btn-state">
+          Add note
+        </button>
+      </form>
+    </section>
+
     <script src="./index.js"></script>
-</body>
+  </body>
 </html>

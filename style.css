@@ -1,16 +1,177 @@
-:root{
-    --head-color:hsla(0, 0%, 13%, 1);
-    --dark-blue:hsla(228, 69%, 13%, 1);
-    --blue:hsla(228, 69%, 20%, 1);
+:root {
+  --head-color: hsla(0, 0%, 13%, 1);
+  --dark-blue: hsla(228, 69%, 13%, 1);
+  --blue: hsla(228, 69%, 20%, 1);
 
-    --content-color: hsla(0, 0%, 13%, 1);
-    --date-color:hsla(0, 2%, 44%, 1);
-    --white:hsla(0, 0%, 100%, 1);
-
-
+  --content-color: hsla(0, 0%, 13%, 1);
+  --date-color: hsla(0, 2%, 44%, 1);
+  --white: hsla(0, 0%, 100%, 1);
 }
-*{
-    box-sizing: border-box;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  position: relative;
+  inline-size: 100%;
+  block-size: 100%;
+  font-family: "DM Sans", sans-serif;
+  background: var(--white);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0.8rem;
+}
+main {
+  max-inline-size: 358px;
+  inline-size: 100%;
+}
+
+h1 {
+  font-size: 24px;
+  line-height: 24px;
+  font-weight: 700;
+  margin-block: 1.7rem;
+}
+.shadow-bg {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  inline-size: 100vw;
+  block-size: 100vh;
+  background: black;
+  opacity: 0.6;
+}
+
+/* add note form style */
+.Add-new-note-btn {
+  background-color: var(--dark-blue);
+  font-size: 16px;
+  line-height: 16px;
+  display: inline-block;
+  inline-size: 100%;
+  text-align: center;
+  text-decoration: none;
+  padding: 15px 24px;
+  color: var(--white);
+  border-radius: 25px;
+  margin-block-end: 1.5rem;
+}
+
+.add-note-form {
+  position: fixed;
+  top: 10rem;
+  background-color: var(--white);
+  padding: 1rem;
+  border-radius: 1rem;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  max-inline-size: 350px;
+}
+.form-heading-flex {
+  margin-block: 1rem;
+  inline-size: 310px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+.form-heading {
+  font-size: 18px;
+  line-height: 24px;
+  color: var(--head-color);
+}
+textarea {
+  resize: none;
+  padding: 0.7rem;
+  display: block;
+  inline-size: 310px;
+  block-size: 112px;
+  border-radius: 10px;
+}
+textarea[type="placeholder"] {
+  font-style: italic;
+}
+.submit-note {
+  padding: 15px 24px;
+  background: var(--dark-blue);
+  border-radius: 20px;
+  color: var(--white);
+  margin-block-start: 1rem;
+  margin-inline-start: 66%;
+  border: none;
+  white-space: nowrap;
+}
+/* cancel form button */
+.x-button {
+  background: none;
+  border: none;
+}
+.x-button:hover svg rect {
+  fill: red;
+}
+
+/* buttons effect states */
+.btn-state {
+  transition-property: transform transform;
+  transition-duration: 0.2s 0;
+  transition-timing-function: linear;
+}
+.btn-state:active {
+  transform: translateY(10%);
+}
+.btn-state:hover {
+  background: hsla(228, 69%, 20%, 1);
+}
+.btn-state:focus {
+  border: 2px solid lightseagreen;
+}
+.btn-state:disabled {
+  background: hsla(228, 9%, 63%, 1);
+}
+
+/* medium screen implementation */
+@media only screen and (min-width: 737px) {
+  main {
+    padding: 1rem;
+    max-inline-size: 100%;
+  }
+  header {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-block-end: 0.5rem;
+  }
+
+  .shadow-bg {
+    block-size: 120vh;
+  }
+
+  .Add-new-note-btn {
+    inline-size: 25%;
     margin: 0;
-    padding: 0;
+    white-space: nowrap;
+  }
 }
+
+/* large screen implementation */
+@media only screen and (min-width: 1312px) {
+  .article-section {
+    inline-size: 316px;
+    block-size: 316px;
+  }
+  .Add-new-note-btn {
+    inline-size: 15%;
+  }
+}
+
+/* add content form */
